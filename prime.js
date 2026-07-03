@@ -13,6 +13,7 @@ const isPrime = (num) => {
         }
     }
     return true;
+};
     // TODO: 1. Handle edge cases (numbers <= 1) using const rules where applicable
     let number =17;
     if(isPrime(number)){
@@ -20,4 +21,4 @@ const isPrime = (num) => {
     }else{
         console.log(number + "is not a Prime Number");
     }
-}
+
