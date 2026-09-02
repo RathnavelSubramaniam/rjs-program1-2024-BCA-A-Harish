@@ -3,7 +3,7 @@
  * @param {number} num - The number to check.
  * @returns {boolean} True if prime, false otherwise.
  */
-const isPrime =(num) => {
+const isPrime = (num) => {
     if (num <= 1) {
         return false;
     }
@@ -15,10 +15,12 @@ const isPrime =(num) => {
     }
 
     return true;
-}
+};
 
-// Example
-let number = 17;
+const fs = require("fs");
+
+const input = fs.readFileSync(0, "utf8").trim();
+const number = Number(input);
 
 if (isPrime(number)) {
     console.log(number + " is a Prime Number");
