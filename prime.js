@@ -17,15 +17,4 @@ const isPrime = (num) => {
     return true;
 };
 
-const fs = require("fs");
-
-const input = fs.readFileSync(0, "utf8").trim();
-const number = Number(input);
-
-if (isPrime(number)) {
-    console.log(number + " is a Prime Number");
-} else {
-    console.log(number + " is not a Prime Number");
-}
-
 module.exports = isPrime;
