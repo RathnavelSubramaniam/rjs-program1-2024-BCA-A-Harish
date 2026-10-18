@@ -13,3 +13,12 @@ const isPrime = (num) => {
 };
 
 module.exports = isPrime;
+
+const fs = require("fs");
+
+if (require.main === module) {
+    let input = fs.readFileSync(0, "utf8").trim();
+    const number = Number(input);
+
+    console.log(isPrime(number));
+}
