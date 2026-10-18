@@ -12,7 +12,9 @@ const isPrime = (num) => {
     return true;
 };
 
-let number = 15;
+const fs = require("fs");
+let input = fs.readFileSync(0, "utf8").trim();
+let number = Number(input);
 
 if (isPrime(number)) {
     console.log(number + " is a Prime Number");
