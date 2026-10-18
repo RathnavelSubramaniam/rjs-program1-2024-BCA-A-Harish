@@ -3,7 +3,7 @@ const isPrime = (num) => {
         return false;
     }
 
-    for (let i = 2; i < num; i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) {
             return false;
         }
@@ -12,12 +12,4 @@ const isPrime = (num) => {
     return true;
 };
 
-const fs = require("fs");
-let input = fs.readFileSync(0, "utf8").trim();
-let number = Number(input);
-
-if (isPrime(number)) {
-    console.log(number + " is a Prime Number");
-} else {
-    console.log(number + " is not a Prime Number");
-}
+module.exports = isPrime;
